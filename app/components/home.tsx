@@ -2,8 +2,6 @@
 
 require("../polyfill");
 
-import "web-streams-polyfill";
-
 import { useState, useEffect } from "react";
 
 import styles from "./home.module.scss";

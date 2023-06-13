@@ -490,7 +490,7 @@ export const useChatStore = create<ChatStore>()(
               content: Locale.Store.Prompt.Summarize,
               date: "",
             }),
-            config: { ...modelConfig, stream: true },
+            config: { ...modelConfig, stream: false },
             onUpdate(message) {
               session.memoryPrompt = message;
             },
