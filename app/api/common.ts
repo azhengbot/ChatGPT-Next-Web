@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import fetch from "isomorphic-unfetch";
 
 export const OPENAI_URL = "api.openai.com";
 const DEFAULT_PROTOCOL = "https";

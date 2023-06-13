@@ -1,3 +1,5 @@
+import fetch from "isomorphic-unfetch";
+
 import { REQUEST_TIMEOUT_MS } from "@/app/constant";
 import { useAccessStore, useAppConfig, useChatStore } from "@/app/store";
 
@@ -50,7 +52,9 @@ export class ChatGPTApi implements LLMApi {
 
     console.log("[Request] openai payload: ", requestPayload);
 
-    const shouldStream = !!options.config.stream;
+    // const shouldStream = !!options.config.stream;
+    console.log("[Request] openai shouldStream: ", !!options.config.stream);
+    const shouldStream = false;
     const controller = new AbortController();
     options.onController?.(controller);
 
@@ -130,6 +134,7 @@ export class ChatGPTApi implements LLMApi {
             }
             const text = msg.data;
             try {
+              console.log("[opentai text]: ", text);
               const json = JSON.parse(text);
               const delta = json.choices[0].delta.content;
               if (delta) {

@@ -628,7 +628,7 @@ export function Chat() {
                 role: "assistant",
                 content: "……",
               }),
-              preview: true,
+              preview: false,
             },
           ]
         : [],
@@ -641,7 +641,7 @@ export function Chat() {
                 role: "user",
                 content: userInput,
               }),
-              preview: true,
+              preview: false,
             },
           ]
         : [],

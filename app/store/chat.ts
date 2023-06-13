@@ -243,7 +243,7 @@ export const useChatStore = create<ChatStore>()(
 
         const botMessage: ChatMessage = createMessage({
           role: "assistant",
-          streaming: true,
+          streaming: false,
           id: userMessage.id! + 1,
           model: modelConfig.model,
         });
@@ -280,9 +280,9 @@ export const useChatStore = create<ChatStore>()(
         console.log("[User Input] ", sendMessages);
         api.llm.chat({
           messages: sendMessages,
-          config: { ...modelConfig, stream: true },
+          config: { ...modelConfig, stream: false },
           onUpdate(message) {
-            botMessage.streaming = true;
+            botMessage.streaming = false;
             if (message) {
               botMessage.content = message;
             }
