@@ -1,3 +1,4 @@
+import fetch from "isomorphic-unfetch";
 import { NextRequest, NextResponse } from "next/server";
 
 export const OPENAI_URL = "api.openai.com";

@@ -4,6 +4,7 @@ console.log("[Next] build mode", mode);
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   webpack(config) {
+    config.resolve.alias['unfetch$'] = 'isomorphic-unfetch'
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],

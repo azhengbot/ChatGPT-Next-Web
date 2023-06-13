@@ -243,7 +243,7 @@ export const useChatStore = create<ChatStore>()(
 
         const botMessage: ChatMessage = createMessage({
           role: "assistant",
-          streaming: true,
+          streaming: false,
           id: userMessage.id! + 1,
           model: modelConfig.model,
         });
@@ -282,7 +282,7 @@ export const useChatStore = create<ChatStore>()(
           messages: sendMessages,
           config: { ...modelConfig, stream: false },
           onUpdate(message) {
-            botMessage.streaming = true;
+            botMessage.streaming = false;
             if (message) {
               botMessage.content = message;
             }

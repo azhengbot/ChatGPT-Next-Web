@@ -1,3 +1,4 @@
+import fetch from "isomorphic-unfetch";
 import { OpenaiPath, REQUEST_TIMEOUT_MS } from "@/app/constant";
 import { useAccessStore, useAppConfig, useChatStore } from "@/app/store";
 

@@ -1,3 +1,4 @@
+import fetch from "isomorphic-unfetch";
 import { ACCESS_CODE_PREFIX } from "../constant";
 import { ChatMessage, ModelConfig, ModelType, useAccessStore } from "../store";
 import { ChatGPTApi } from "./platforms/openai";
