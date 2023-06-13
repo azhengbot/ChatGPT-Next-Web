@@ -1,4 +1,5 @@
-const { Readable } = require("stream-browserify");
+require("stream-browserify");
+import fetch from "isomorphic-unfetch";
 
 import { REQUEST_TIMEOUT_MS } from "@/app/constant";
 import { useAccessStore, useAppConfig, useChatStore } from "@/app/store";
