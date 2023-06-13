@@ -1,7 +1,4 @@
 const { Readable } = require("stream-browserify");
-import VConsole from "vconsole";
-
-const vConsole = new VConsole();
 
 import { REQUEST_TIMEOUT_MS } from "@/app/constant";
 import { useAccessStore, useAppConfig, useChatStore } from "@/app/store";
