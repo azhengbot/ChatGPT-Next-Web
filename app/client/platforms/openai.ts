@@ -52,7 +52,9 @@ export class ChatGPTApi implements LLMApi {
 
     console.log("[Request] openai payload: ", requestPayload);
 
-    const shouldStream = !!options.config.stream;
+    // const shouldStream = !!options.config.stream;
+    console.log("[Request] openai shouldStream: ", !!options.config.stream);
+    const shouldStream = false;
     const controller = new AbortController();
     options.onController?.(controller);
 
